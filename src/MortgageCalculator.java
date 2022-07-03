@@ -1,5 +1,6 @@
 import java.time.LocalDate;
 import java.time.Period;
+import static java.lang.System.out;
 
 public class MortgageCalculator {
 
@@ -44,9 +45,9 @@ public class MortgageCalculator {
         LocalDate today = LocalDate.now();
         LocalDate birthday = LocalDate.of(yearOfBirt, month, day);
 
-        Period p = Period.between(birthday, today);
-        int age = p.getYears();
-        System.out.println(age);
+        Period period = Period.between(birthday, today);
+        int age = period.getYears();
+        out.println(age);
         return age;
     }
 
